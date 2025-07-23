@@ -63,9 +63,9 @@ jobs:
           context: .
           file: ./docker/Dockerfile
           push: false # 💡 关键修改：将 'push' 设置为 false，只编译不推送
-          tags: |
-            your_docker_repo/your_image_name:${{ env.VERSION }}
-            your_docker_repo/your_image_name:latest
+       #   tags: |
+       #     your_docker_repo/your_image_name:${{ env.VERSION }}
+       #     your_docker_repo/your_image_name:latest
           platforms: linux/amd64 # 继续明确只编译 x86_64 平台
           build-args: |
             GO_VERSION=1.24.1
