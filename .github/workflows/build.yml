@@ -61,6 +61,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
+          file: ./docker/Dockerfile
           push: false # 💡 关键修改：将 'push' 设置为 false，只编译不推送
           tags: |
             your_docker_repo/your_image_name:${{ env.VERSION }}
